@@ -1,0 +1,13 @@
+services:
+  python-deps:
+    name: Python Dependencies Installer
+    triggeredBy:
+      - manual
+      - containerStart
+    commands:
+      start: |
+        echo "Installing Python dependencies..."
+        sudo python -m pip install --upgrade pip
+        sudo python -m pip install -r requirements.txt
+      ready: |
+        python -m pip show numpy > /dev/null
