@@ -4,6 +4,6 @@
 // See https://aka.ms/devcontainer.json for more information.
 {
   "name": "Python DevContainer",
-  "image": "mcr.microsoft.com/devcontainers/python"
+  "image": "mcr.microsoft.com/devcontainers/python",
+  "postCreateCommand": "pip install -r requirements.txt"
 }
-
